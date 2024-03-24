@@ -1,0 +1,77 @@
+.navbar{
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    text-transform: uppercase;
+    padding-top: 20px;
+   
+}
+
+.nav-logo img{
+    width: 70px;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-logoText{
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    padding: 30px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    
+    
+    
+    
+    
+}
+
+.nav-menu li{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    
+}
+
+.nav-menu li:hover{
+    color: #C32120;
+}
+.nav-menu li:hover::after {
+    
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -30px; /* Adjust the space between text and border */
+    width: 100%;
+    height: 2px; /* Thickness of the border */
+    background-color: #C32120; /* Color of the border */
+}
+.nav-menu li .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px; /* Adjust as needed */
+    width: 100%;
+    height: 2px;
+    background-color: #C32120; /* Change border color for active link */
+  }

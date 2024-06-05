@@ -1,0 +1,97 @@
+.movieInfo{
+    display: flex;
+    padding: 100px 15%;
+    gap: 70px;
+    
+}
+
+.movieInfo h1{
+    color: #C32120;
+    border-bottom: 2px solid #C32120;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.mi-left{
+    width: 60%;
+}
+
+.mi-right{
+    width: 35%;
+}
+
+
+.mi-left-container{
+    display: flex;
+    gap: 20px;
+    color: #717171;
+    padding-top: 30px;
+}
+
+.mi-left-image img{
+    width: 280px;
+    border-radius: 20px;
+}
+
+.plot-title{
+    font-size: 20px;
+}
+
+.plot{
+    font-size: 15px;
+}
+
+
+
+.plot-info{
+    display: flex;
+    padding-top: 30px;
+    gap: 30px;
+    font-size: 15px;
+}
+
+.plot-info > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.viewingTimes {
+    display: flex;
+    color: #717171;
+    font-size: 14px;
+    padding-top: 30px;
+  }
+  
+  .viewingTimes table {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .viewingTimes tr{
+  }
+.viewingTimes td {
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .mi-time td{
+    background-color: #C32120 ;
+    padding: 7px;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+  }
+
+  .mi-time tr{
+    display: flex;
+    gap: 10px;
+  }
+
+  
+
+  

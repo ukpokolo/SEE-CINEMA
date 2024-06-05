@@ -1,0 +1,185 @@
+.whatsOn{
+    padding-bottom: 50px;
+}
+
+.whatsOn-nav{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 0 15%;
+}
+
+.whatsOn-nav ul{
+    display: flex;
+    width: 50%;
+    list-style: none;
+    padding-left: 0;
+    
+    
+}
+
+.whatson-hr{
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.whatsOn-nav li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px
+    
+    
+}
+.whatsOn-nav li:hover{
+    border-bottom: 1px solid red;
+    color: #C32120;
+}
+
+.whatsOn-todayDate{
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.whatsOn-movie{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.whatsOn-movieImage {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.whatsOn-movieText{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.whatsOn-movieText h3{
+    color: #C32120;
+    font-size: 15px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.whatsOn-movieText h2{
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.whatsOn-movieText p{
+    font-size: 15px;
+}
+
+.whatsOn-viewingTimes{
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.whatsOn-viewingTimes div{
+    border: 1px solid red;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #C32120;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.whatsOn-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.whatsOn-rating{
+    display: flex;
+    gap: 10px;
+}
+
+.whatsOn-rating{
+    display: flex;
+    align-items: center;    
+}
+
+.whatsOn-rating :nth-child(2){
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #ccc;
+}
+
+.whatsOn-movie :nth-child(4){
+    padding-top: 15px;
+}
+
+.selectedDay{
+    color: #C32120;
+}
+
+@media (max-width: 1200px) {
+    .whatsOn-nav{
+        margin: 0 2%;
+    }
+    
+    .whatsOn-movie{
+        width: 95%;
+    }
+
+    .whatson-hr{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+  
+@media (max-width:800px) {
+    .whatsOn-nav ul{
+       width: 80%;
+       border-bottom: 1px solid #ccc;
+       flex-wrap: wrap;
+        
+    }
+    .whatsOn-nav li{
+        width: 20%;        
+       border-bottom: none;
+    }
+
+    .whatsOn-movie{
+        flex-direction: column;
+    }
+}
+@media (max-width:500px) {
+   
+    .whatsOn-nav li{
+        width: 25%;
+        border-bottom: none;
+    }
+
+    .whatsOn-nav ul{
+        border-bottom: 1px solid #ccc;
+    }
+
+    .whatsOn-movieImage {
+        width: 350px;
+       
+    }
+
+
+}

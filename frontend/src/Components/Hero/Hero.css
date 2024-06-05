@@ -1,20 +1,23 @@
-.hero{
-    width: 100%;
-    height: 85vh; 
-    position: relative;
-    color: #fff;
-    text-transform: uppercase;
+.hero {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
 }
 
-.hero-image{
-    width: 100%;
-    height: 85vh;
-    position: absolute;
-    z-index: -1;
+.hero-image {
+  width: 100%;
+  height: 85vh;
+  position: absolute;
+  z-index: -1;
 }
-.hero-image img{
-    width: 100%;
-    height: 100%;
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-image::before,
@@ -23,13 +26,11 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 3.6), transparent); /* Adjust the opacity of the gradient */
+  background: linear-gradient(to right, rgba(0, 0, 0, 1.6), transparent);
 }
 
 .hero-image::before {
   left: 0;
-  
-   
 }
 
 .hero-image::after {
@@ -37,34 +38,113 @@
   width: 100%; /* Make the bottom-left corner fully dark */
 }
 
-.hero-text{
-    width: 450px;
-    justify-content: center;
-    padding-left: 15%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.hero-text {
+  width: 450px;
+  justify-content: center;
+  padding-left: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.hero-genre p{
-    color: #C32120;
-    font-size: 16px
+.hero-genre p {
+  color: #C32120;
+  font-size: 16px;
 }
 
-.hero-movieName{
-    font-size: 30px;
+.hero-movieName {
+  font-size: 30px;
 }
 
-.hero-text-bottom{
+.hero-text-bottom {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
-.hero-pg{
-  border: 1px solid white;
-  border-radius: 50%;
+.hero-pg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Adjust the width and height to control the size of the circle */
   height: 50px;
-  width: 50px;
-  font-size: 12px;
+  border-radius: 50%; /* Make it a circle */
+  border: 2px solid #fff; /* Border color and width */
+}
+
+.hero-pg p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.hero-trailer button {
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: #C32120;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .hero-text {
+    padding-left: 2%;
+    width: 700px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-text {
+    width: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-text {
+    padding-left: 5%;
+    width: 90%;
+    
+  }
+
+ 
+}
+
+@media (max-width: 500px) {
+  .hero-text {
+    padding-left: 5%;
+    width: 90%;
+  }
+
+  .hero-movieName{
+    font-size: 25px;
+  }
+
+  .hero-summary{
+    font-size: 13px ;
+  }
+
+  
+
+  /* Hide the original nav menu by default */
+  .nav-menu {
+    display: none;
+  }
+
+  /* Style the burger button */
+  .nav-logo {
+    position: relative;
+  }
+
+  .nav-logo::after {
+    content: "\u2630"; /* unicode for hamburger icon */
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 }

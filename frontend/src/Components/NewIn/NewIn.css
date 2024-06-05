@@ -1,0 +1,110 @@
+.newin {
+    padding: 120px 15%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .newin h1 {
+    border-bottom: 3px solid red;
+    width: 120px;
+    font-size: 20px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .newin-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    position: relative;
+    padding-bottom: 10px;
+    cursor: grab;
+    height: 380px;
+  }
+  
+  .newin-container:active {
+    cursor: grabbing;
+  }
+  
+  .newin-box {
+    position: relative;
+    height: 310px;
+    width: 220px;
+    padding-top: 50px;
+    flex-shrink: 0; /* Prevent flex items from shrinking */
+  }
+  
+  .newin-box img {
+    position: absolute;
+    z-index: -1;
+    border: none;
+    border-radius: 15px;
+    width: 220px;
+  }
+  
+  .newin-box-hover {
+    height: 97%;
+    position: relative;
+  }
+  
+  .newin-box-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    gap: 5px;
+    display: flex;
+    color: #fff;
+    visibility: hidden; /* Hide the text content by default */
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: opacity 0.3s ease;
+  }
+  
+  .newin-box:hover .newin-box-text {
+    visibility: visible; /* Make the text content visible when the parent .newin-box is hovered */
+    opacity: 1; /* Set opacity to 1 on hover */
+    transition-delay: 0.3s; /* Remove the transition delay on hover */
+  }
+  
+  .newin-trailer {
+    border: 1px solid white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  .newin-box-text h3 {
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  
+  .newin-box-title {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+  
+  .newin-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+  
+  .newin-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .no-select {
+    user-select: none; /* Disable text selection */
+  }
+  
+  @media (max-width: 1200px) {
+    .newin {
+      padding: 120px 2%;
+    }
+  }
+  

@@ -1,0 +1,87 @@
+.movieHero{
+    height: 80vh;
+    position: relative;
+    width: 100%;
+}
+
+.mh-background-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Assets/apes.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    z-index: -1; /* Push it behind the content */
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%; /* Cover the left half */
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent); /* Left gradient */
+      }
+    
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2000px; /* Cover the bottom */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent); /* Bottom gradient */
+      }
+}
+
+.mh-text{
+    color: #fff;
+    width: 700px;
+    padding-left: 15%;
+    padding-top: 200px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mh-genre{
+    color: #C32120;
+    font: 16px;
+    text-transform: uppercase;
+}
+
+.mh-title{
+    font-size: 50px;
+}
+
+.mh-bottom{
+    display: flex;
+    gap: 20px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.mh-rating{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Adjust the width and height to control the size of the circle */
+  height: 50px;
+  border-radius: 50%; /* Make it a circle */
+  border: 2px solid #fff; /* Border color and width */
+
+}
+
+.movieHero button{
+    border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: #C32120;
+  color: #fff;
+  cursor: pointer;
+}

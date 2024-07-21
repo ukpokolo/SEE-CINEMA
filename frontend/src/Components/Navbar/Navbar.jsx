@@ -7,6 +7,10 @@ function Navbar() {
   const location = useLocation();
   const [scrolling, setScrolling] = useState(false);
 
+  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
+  const [menuClass, setMenuClass] = useState("menu hidden");
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -23,29 +27,39 @@ function Navbar() {
     };
   }, []);
 
+  const updateMenu = () => {
+    if (!isMenuClicked) {
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("menu visible");
+    } else {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu hidden");
+    }
+    setIsMenuClicked(!isMenuClicked);
+  };
+
   return (
     <div className={`navbar ${scrolling ? 'scrolling' : ''}`}>
       <div className="nav-logo">
-        <img src={navlogo} alt="" />
+        <img src={navlogo} alt="Logo" />
         <p className='nav-logoText'>SEE CINEMA</p>
       </div>
-      <ul className='nav-menu'>
+      <div className="burger-menu" onClick={updateMenu}>
+        <div className={burgerClass}></div>
+        <div className={burgerClass}></div>
+        <div className={burgerClass}></div>
+      </div>
+      <ul className={`nav-menu ${isMenuClicked ? 'visible' : 'hidden'}`}>
         <li>
-          <Link to="/" style={{ textDecoration: 'none',  color: 'inherit' }} className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} className={location.pathname === "/" ? "active" : ""}>
             Home
           </Link>
         </li>
-        {/* <li>
-          <Link to="/whats-on" style={{ textDecoration: 'none',  color: 'inherit' }}  className={location.pathname === "/whats-on" ? "active" : ""}>
-            Whats On
-          </Link>
-        </li> */}
         <li>
-          <Link to="/contact-us" style={{ textDecoration: 'none',  color: 'inherit' }} className={location.pathname === "/contact-us" ? "active" : ""}>
+          <Link to="/contact-us" style={{ textDecoration: 'none', color: 'inherit' }} className={location.pathname === "/contact-us" ? "active" : ""}>
             Contact Us
           </Link>
         </li>
-        
       </ul>
     </div>
   );

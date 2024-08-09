@@ -6,18 +6,13 @@ import navlogo from '../Assets/logo.png';
 function Navbar() {
   const location = useLocation();
   const [scrolling, setScrolling] = useState(false);
-
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
   const [menuClass, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      setScrolling(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -28,14 +23,9 @@ function Navbar() {
   }, []);
 
   const updateMenu = () => {
-    if (!isMenuClicked) {
-      setBurgerClass("burger-bar clicked");
-      setMenuClass("menu visible");
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setMenuClass("menu hidden");
-    }
     setIsMenuClicked(!isMenuClicked);
+    setBurgerClass(isMenuClicked ? "burger-bar unclicked" : "burger-bar clicked");
+    setMenuClass(isMenuClicked ? "menu hidden" : "menu visible");
   };
 
   return (
@@ -49,14 +39,14 @@ function Navbar() {
         <div className={burgerClass}></div>
         <div className={burgerClass}></div>
       </div>
-      <ul className={`nav-menu ${isMenuClicked ? 'visible' : 'hidden'}`}>
+      <ul className={`${menuClass} nav-menu`}>
         <li>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/" className={location.pathname === "/" ? "active" : ""} style={{ textDecoration: 'none', color: 'inherit' }}>
             Home
           </Link>
         </li>
         <li>
-          <Link to="/contact-us" style={{ textDecoration: 'none', color: 'inherit' }} className={location.pathname === "/contact-us" ? "active" : ""}>
+          <Link to="/contact-us" className={location.pathname === "/contact-us" ? "active" : ""} style={{ textDecoration: 'none', color: 'inherit' }}>
             Contact Us
           </Link>
         </li>

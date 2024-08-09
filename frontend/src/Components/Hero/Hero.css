@@ -128,23 +128,4 @@
 
   
 
-  /* Hide the original nav menu by default */
-  .nav-menu {
-    display: none;
-  }
-
-  /* Style the burger button */
-  .nav-logo {
-    position: relative;
-  }
-
-  .nav-logo::after {
-    content: "\u2630"; /* unicode for hamburger icon */
-    font-size: 24px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import './MovieInfo.css'
 import movie1 from '../Assets/movie1.jpg'
 
